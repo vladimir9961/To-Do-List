@@ -8,10 +8,17 @@ input.addEventListener("keyup", function(event) {
 });
 
 
-function getInputValue(){
-    // Selecting the input element and get its value 
+
+
+
+//if empty is true then do this >>>
+function empty(){
+  // Selecting the input element and get its value 
+  if(document.getElementById("input").value.length === 0)
+  {
+      alert("You cannot leave empty input field")
+  } else{
     let inputVal = document.getElementById("input").value;
-    
     // Appending the value from input in created element
     let newTH = document.createElement('li');      
     newTH.setAttribute("id", "list");
@@ -29,23 +36,28 @@ function getInputValue(){
       newBtn.innerHTML = "Done";
       newTH.appendChild(newBtn);
 
-      
+       //Creating ul but multiple times
+    let creUl = document.createElement('ul');  
+    creUl.setAttribute("id", "list-ul");
+    creUl.appendChild(newTH);
 
 
     //Creating li
     let table = document.getElementById('todo-list');
-    table.appendChild(newTH);
+    table.appendChild(creUl);
     
+   
 
     newBtn.onclick = function() {
       let delBtn = newTH;
       delBtn.remove();
 
-      console.log(delBtn)
+      
+      
     };
    
+  };
 };
-
 
 //Button For Deleting Items From Li
 function myFunction() {
@@ -54,5 +66,4 @@ function myFunction() {
     let btnbtn = document.getElementById("btn");
     btnbtn.remove();
 }
-
 
