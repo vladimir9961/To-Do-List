@@ -1,3 +1,4 @@
+//on enter key press append function
 let input = document.getElementById("input");
 
 input.addEventListener("keyup", function(event) {
@@ -8,15 +9,11 @@ input.addEventListener("keyup", function(event) {
 });
 
 
-
-
-
-//if empty is true then do this >>>
 function empty(){
   // Selecting the input element and get its value 
-  if(document.getElementById("input").value.length === 0)
+  if(document.getElementById("input").value.length == 0)
   {
-      alert("You cannot leave empty input field")
+      alert("Nemoze prazno polje ticu")
   } else{
     let inputVal = document.getElementById("input").value;
     // Appending the value from input in created element
@@ -30,21 +27,18 @@ function empty(){
     
    
       
-      //Creating button for delete
-      let newBtn = document.createElement('button');
-      newBtn.setAttribute("id", "btn"); 
-      newBtn.innerHTML = "Done";
-      newTH.appendChild(newBtn);
+    //Creating button for delete
+    let newBtn = document.createElement('button');
+    newBtn.setAttribute("id", "btn"); 
+    newBtn.innerHTML = "Done";
+    newTH.appendChild(newBtn);
 
-       //Creating ul but multiple times
-    let creUl = document.createElement('ul');  
-    creUl.setAttribute("id", "list-ul");
-    creUl.appendChild(newTH);
+     
 
 
     //Creating li
     let table = document.getElementById('todo-list');
-    table.appendChild(creUl);
+    table.appendChild(newTH);
     
    
 
