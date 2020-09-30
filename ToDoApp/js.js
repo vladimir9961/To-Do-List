@@ -13,9 +13,10 @@ function empty(){
   // Selecting the input element and get its value 
   if(document.getElementById("input").value.length == 0)
   {
-      alert("Nemoze prazno polje ticu")
+      alert("Cant leave empty field")
   } else{
     let inputVal = document.getElementById("input").value;
+
     // Appending the value from input in created element
     let newTH = document.createElement('li');      
     newTH.setAttribute("id", "list");
@@ -24,17 +25,12 @@ function empty(){
     let newP = document.createElement('p'); 
     newTH.appendChild(newP);
     newP.innerHTML = inputVal;
-    
-   
-      
+     
     //Creating button for delete
     let newBtn = document.createElement('button');
     newBtn.setAttribute("id", "btn"); 
     newBtn.innerHTML = "Done";
     newTH.appendChild(newBtn);
-
-     
-
 
     //Creating li
     let table = document.getElementById('todo-list');
@@ -45,19 +41,22 @@ function empty(){
     newBtn.onclick = function() {
       let delBtn = newTH;
       delBtn.remove();
-
       
       
     };
    
   };
+  document.getElementById('input').value = ''
 };
 
 //Button For Deleting Items From Li
 function myFunction() {
-    let myobj = document.getElementById("list");
-    myobj.remove();
-    let btnbtn = document.getElementById("btn");
-    btnbtn.remove();
+  let e = document.querySelector("ul"); 
+        
+  let child = e.lastElementChild;  
+  while (child) { 
+      e.removeChild(child); 
+      child = e.lastElementChild;
+    
 }
-
+};
