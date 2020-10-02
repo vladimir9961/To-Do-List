@@ -3,31 +3,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="custom.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
 
     <div class="container">
-
         <div class="box">
             <h1 class="main-title">To Do List</h1>
 
             <input type="text" class="input-text" id="input" onfocus="this.value=''">
 
-            <button id="myBtn" type="button" onclick="empty();">Add Task</button>
+            <button id="myBtn" type="button" onclick="information();">Add Task</button>
            
             <button id="myBtnDel" type="button" onclick="myFunction()">Clear All</button>
-            
+
             <div class="todo-container">
                     <ul id="todo-list">
-                        
+                        <p id="openedtext"></p>
                         
                     </ul>
                 </div>
             </div>
-        </div>
-
-    
+        </div> 
     <script src="js.js"></script>  
 </body>
 </html>

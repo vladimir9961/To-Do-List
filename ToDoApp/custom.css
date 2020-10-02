@@ -5,19 +5,20 @@
 }
 .container{
   margin: auto;
-  width: 50%;
+  width: 70%;
   border: 3px solid green;
   padding: 10px;
   text-align: center;
-  height: 300px;
+  height: 100vh;
 }
 .box{
     margin: 0;
     position: relative;
-    top: 25%;
+    top: 5vh;
 }
 .input-text{
     line-height: 24px;
+    width: 300px;
 }
 .todo-container{
 width: 100%;
@@ -37,13 +38,116 @@ text-overflow: hidden;
     width: 100%;
     height: 32px;
     padding: 10px 0 0 0;
-    border-bottom: 1px solid red;
+    
 }
-#list p{
-
+#list #paragraf{   
     float: left;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+#list #pTime{
+    font-family: 'Noto Sans JP', sans-serif;
+}
+#btnDone{
+    float: right;
+    box-shadow: 0px 10px 14px -7px #3e7327;
+	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+	background-color:#77b55a;
+	border-radius:4px;
+	border:1px solid #4b8f29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #5b8a3c;
+    margin-left: 20px;
+}
+#btnDone:hover {
+	background:linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+	background-color:#72b352;
+}
+#btnDone:active {
+	position:relative;
+	top:1px;
 }
 #todo-list #btn{
     float: right;
-    width: 50px;
+	box-shadow:inset 0px 1px 0px 0px #cf866c;
+	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+	background-color:#d0451b;
+	border-radius:3px;
+	border:1px solid #942911;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:6px 24px;
+	text-decoration:none;
+    margin-left: 5px;  
+}
+#todo-list #btn:hover {
+	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+	background-color:#bc3315;
+}
+#todo-list #btn:active {
+	position:relative;
+	top:1px;
+}
+.line{
+    text-decoration: line-through;
+}
+#pTime{
+    text-align: right;
+    font-size: 16px;
+}
+#myBtn{
+    box-shadow: 0px 10px 14px -7px #3e7327;
+	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+	background-color:#77b55a;
+	border-radius:4px;
+	border:1px solid #4b8f29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #5b8a3c;
+}
+#myBtn:hover {
+	background:linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+	background-color:#72b352;
+}
+#myBtn:active {
+	position:relative;
+	top:1px;
+}
+#myBtnDel{
+	box-shadow:inset 0px 1px 0px 0px #cf866c;
+	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+	background-color:#d0451b;
+	border-radius:3px;
+	border:1px solid #942911;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:6px 24px;
+	text-decoration:none;
+    margin-left: 5px;  
+}
+#myBtnDel:hover {
+	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+	background-color:#bc3315;
+}
+#myBtnDel:active {
+	position:relative;
+	top:1px;
 }
